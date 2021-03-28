@@ -9,7 +9,7 @@
 
 ## Soundtrack
 1. Download VLC Media Player (you will need this to run .mod files
-2. Download tracks from root/soundtrack
+2. Download tracks from this repository main/soundtrack
 
 # INFO
 
