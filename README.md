@@ -7,6 +7,10 @@
 ## HTML5
 * Simply navigate to rowdymon.netlify.app and enjoy!
 
+## Soundtrack
+1. Download VLC Media Player (you will need this to run .mod files
+2. Download tracks from root/soundtrack
+
 # INFO
 
 ## Inspiration
