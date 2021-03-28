@@ -1,31 +1,43 @@
-# Rowdymon
+# JavaScript GameBoy Color Emulator
 
-## Inspiration
-Inspired by several retro, chiptune game series, Rowdymon seeks to emulate the classic monster-training genre with an on-theme twist! Like most children who came of age during the early 21st century, we've always has a soft spot for this archetype and wanted to create something reminiscent of some of our fondest memories. We hope you're impressed by what Rowdymon has to offer, and that you have as much fun playing as we did creating it!
+Fork of Grant Galitz's JavaScript GameBoy Color Emulator made for running a single ROM
+when uploading homebrew games to services like Itch.io.
 
-## What it does
-Rowdymon is a ROM built for the Nintendo Game Boy®, which can also be enjoyed using an emulator or our HTML5 port. A top-down RPG trainer, Rowdymon comes equipped with original sprites and backgrounds, as well as a full OST! This game allows you to capture, train, and battle your very own Rowdymon, complete with the ability to save and continue your file. Compete to become the absolute best, like none has been before!
+This version makes the following changes.
 
-## How we built it
-We used GBStudio, an indie-made development software, to design, compile, and port the game as a fully functional cartridge ROM. To conform our resources fully to the Game Boy hardware, we created our assets using the following software:
-Soundtrack: MilkyTracker (a chiptune audio workshop which generates compact .mod files)
-Backgrounds: Tiled (an image designer built for 16-bit gaming devices)
-Sprites: GNU Image Manipulation Program
+- Canvas fills browser window on desktop/tablet while keeping aspect ratio
+- Touch controls displayed on mobile/tablet 
+- Using css `image-rendering: pixelated` rather than bilinear filtering
+- Touch dpad controls for mobile using touch move with a deadzone
+- Keyboard fix for iPad keyboard case that doesn't report keyup event keycode
+- Wait for keyboard or touch input before starting AudioContext to fix issues in Chrome and iOS not playing Audio
+- No ability to switch ROM, or save/load states, this version is intended for deploying a single game
 
-## Challenges we ran into
-Creating a game built for a 16-bit operating system and hardware means we had to do a bit of backwards time-traveling, which foreseeably came with a great deal of bugs and limitations! We encountered many software errors when compiling our soundtrack and had to implement several workarounds to properly format our music for the GB sound card.
-GBStudio is also still in it's beta release, meaning we had to develop several algorithms to work around some functional limitations, such as the inability to define an object class. The battle system was especially tough to implement.
-Finally, our biggest issue: exhaustion! We put a LOT of effort into this game to polish it the most we could, which took up a great amount of time. Nonetheless, we hope you're as proud of the finished product as we are!
+## Usage
 
-## Accomplishments that we're proud of
-* Learning to work with several new development software, as well as entirely new hardware!
-* Overcoming technical difficulties, as always, with every program!
-* Generating our artistic assets originally, including our own chiptune soundtrack!
+- Clone this repository
+- Add your ROM file as `rom/game.gb` (or edit romPath in js/other/mobile.js to point to your ROM file)
+- Upload to a webserver and visit index.html
 
-## What we learned
-* How to design and export pixel art with a limited color pallette
-* Designing .mod files and sound generation with a 16-bit tracker
-* Game-building with GBStudio and Tiled
+## Keyboard Controls
 
-## What's next for RowdyMon
-Expanding the map, adding a leveling feature, and implementing item storage are all some great ideas we're considering for Rowdymon. We'd love to add cross-device trading and learn how to work with the Game Boy link cable (another exciting hardware hack)!
+Up - Up Arrow / W  
+Down - Down Arrow / S  
+Left - Left Arrow / A  
+Right - Right Arrow / D  
+A - Alt / Z / J  
+B - Ctrl / K / X  
+Start - Enter  
+Select - Shift  
+
+Edit by changing `bindKeyboard` in `js/other/controls.js`.
+
+## License
+
+**Copyright (C) 2010 - 2016 Grant Galitz**
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
