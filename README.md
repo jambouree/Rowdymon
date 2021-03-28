@@ -1,7 +1,11 @@
 ## How to play
+# Emulator
 1. Download a legal Game Boy emulator (we recommend KiGB http://kigb.emuunlim.com/downloads.htm)
 2. Download rom.zip from this directory (not the rom folder, that is part of the source code)
 3. Load in the zip file to your emulator and enjoy!
+
+# HTML5
+* Simply navigate to rowdymon.netlify.app and enjoy!
 
 ## Inspiration
 Inspired by several retro, chiptune game series, Rowdymon seeks to emulate the classic monster-training genre with an on-theme twist! Like most children who came of age during the early 21st century, we've always has a soft spot for this archetype and wanted to create something reminiscent of some of our fondest memories. We hope you're impressed by what Rowdymon has to offer, and that you have as much fun playing as we did creating it!
