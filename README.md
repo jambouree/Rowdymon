@@ -1,4 +1,4 @@
-##How to play
+## How to play
 1. Download a legal Game Boy emulator (we recommend KiGB http://kigb.emuunlim.com/downloads.htm)
 2. Download rom.zip from this directory (not the rom folder, that is part of the source code)
 3. Load in the zip file to your emulator and enjoy!
